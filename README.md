@@ -12,25 +12,8 @@ The goal of this project is to simulate a business environment where raw transac
 - Surrogate key generation and SCD2 handling
 - Logging and error handling mechanisms
 
-## 🗂️ Project Structure
+## 🛠️ Technologies Used
 
-transactional-data-warehouse/
-│
-├── create_tables.sql # create tables for the data warehouse for all layers
-│
-├── log_setup.sql # exceute logging procedures
-│
-├── load_data.sql # procedures to load data into tables
-│
-├── Source_files_csv/ # Original CSV files
-│
-├── diagrams/
-│ └── Snowflake_Schema.png # ER diagram of the 3NF model
-│ └── Star_Schema.png # ER diagram of the dimensional model
-│
-└── README.md # This file
-
-🛠️ Technologies Used
 SQL (PostgreSQL dialect)
 
 PostgreSQL (as the database engine)
@@ -39,7 +22,8 @@ DBeaver (for SQL development and visualization)
 
 CSV files as the source data format
 
-📊 Key Concepts Demonstrated
+## 📊 Key Concepts Demonstrated
+
 ETL Process: Manual implementation of Extract, Transform, and Load workflows
 
 3NF Modeling: Designing normalized schemas to eliminate redundancy
@@ -49,6 +33,20 @@ Surrogate Keys & Natural Keys: Handling uniqueness and referential integrity
 SCD Type 2: Slowly changing dimension handling with START_DT, END_DT, IS_ACTIVE
 
 Logging: Centralized logging table with timestamps and error messages
+
+## 📦 Data Setup
+
+The Source_files_csv/ folder contains compressed .zip files with the CSV datasets used in this project. To ensure the scripts run correctly, you need to extract these files before proceeding.
+
+Steps to Extract:
+Navigate to the folder in your terminal:
+cd Source_files_csv/
+
+Unzip all the .zip files:
+unzip '\*.zip'
+Or unzip them individually if needed:
+unzip your_file.zip
+After extraction, make sure all the .csv files remain in the Source_files_csv/ directory, as your SQL scripts reference this location.
 
 ## 🚀 Getting Started
 
